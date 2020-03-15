@@ -5,23 +5,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet">
         <link href="fonts.css" rel="stylesheet">
-        <title>singolo</title>
+        <title>singolo</title> 
     </head>
     <body>
+       
         <header>
-            <div class="logo">
+            <div class="logo" id="home">
                 <a href="index.html"><img class="png" src="assets/images/logo.png" alt="logo"></a>
-    
-                <ul class="menu">
-                    <li><span class="red">HOME</span></li>
+                
+                <ul class="menu" >
+                    <li><a  href="#hone" class="nav-item" >HOME</a></li>
                     <li class="pointer"></li>
-                    <li><span>SERVICES</span></li>
+                    <li><a  href="#services" class="nav-item" >SERVICES</a></li>
                     <li class="pointer"></li>
-                    <li><span>PORTFOLIO</span></li>
+                    <li><a  href="#portfolio" class="nav-item">PORTFOLIO</a></li>
                     <li class="pointer"></li>
-                    <li><span>ABOUT</span></li>
+                    <li><a  href="#about_us" class="nav-item">ABOUT</a></li>
                     <li class="pointer"></li>
-                    <li><span>CONTACT</span></li>
+                    <li><a  href="#form" class="nav-item">CONTACT</a></li>
     
                 </ul>
             </div>
@@ -42,7 +43,7 @@
             <div class="scroll_button">
             </div>
     
-            <div class="info">
+            <div class="info" id="services">
                 <section class="services">
                     <div class="container">
                         <h2>Our Services</h2>
@@ -105,7 +106,7 @@
         </main>
 
 
-        <div class="portfolio">
+        <div class="portfolio" id="portfolio">
 
             <h2 class="title_h2" > Portfolio</h2>
             <p class="typo_text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. </p>
@@ -115,7 +116,7 @@
                     <a class="menu_item"  href="#">Graphic Design</a>
                     <a class="menu_item"  href="#">Artwork</a>
                 </div>
-                <div class="portfol_container">
+                <div class="portfol_container" id="photo_container">
                     <div class="portfol_img">
                         <a href="#">
                             <img src="./assets/images/Portfol/1.png" alt="img1">
@@ -180,7 +181,7 @@
 
             </div>
             
-            <div class="about_us">
+            <div class="about_us" id="about_us">
                 <div class="about_us_container">
                 <h2 class="title_h2">About Us</h2>
                 <p class="typo_text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -235,7 +236,7 @@
             </div>
       <div class="wrapper">
         <main>
-          <section class="form">
+          <section class="form" id="form">
             <h2 class="title q-title">Get a Quote</h2>
             <p class="description q-description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="layout-2">
@@ -281,5 +282,6 @@
           </div>
         </footer>
       </div>
+      <script src="script.js"></script>
     </body>
 </html>
