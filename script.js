@@ -126,3 +126,41 @@ HorizontalScreen.addEventListener('click', (event) => {
   else HorizontalScreen.style.zIndex = 0;
   
 });
+
+//FORM
+const submit = document.getElementById('submit_form');
+const nameForm = document.getElementById('name_form');
+const emailForm = document.getElementById('email_form');
+const subjectForm = document.getElementById('subject_form');
+const describeForm = document.getElementById('describe_form');
+const subjectGlass= document.getElementById('subject_glass');
+const describeGlass = document.getElementById('describe_glass');
+const Message = document.getElementById('glass_message')
+const OK = document.getElementById('but_OK');
+
+
+submit.addEventListener('click', () => {
+  
+  if (!(nameForm.reportValidity() && emailForm.reportValidity())) return;
+
+  Message.classList.remove('black_fon');
+  if (subjectForm.value){
+     subjectGlass.textContent = `Subject: ${subjectForm.value}` ;
+  }
+  if (describeForm.value){
+    describeGlass.textContent = `Description: ${describeForm.value}` ;
+  } 
+  if (!subjectForm.value){
+    subjectGlass.textContent = 'No subject' ;
+ }
+ if (!describeForm.value){
+   describeGlass.textContent = 'No Description' ;
+ } 
+ document.getElementById('end_form').reset();
+ 
+
+})
+
+OK.addEventListener('click', () => {
+  Message.classList.add('black_fon');
+})

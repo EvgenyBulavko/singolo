@@ -252,12 +252,12 @@
             <h2 class="title q-title">Get a Quote</h2>
             <p class="description q-description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="layout-2">
-              <form action="#" method="POST" class="form-q">
-                <input class="field_form" type="text" name="user_name" placeholder="Name (Required)" pattern="[A-Za-zА-Яа-я '-]+" required>
-                <input class="field_form" type="email" name="user_email" placeholder="Email (Required)" required>
-                <input class="field_form" type="text" name="subject" placeholder="Subject">
-                <textarea class="field_form f-textarea" name="subject_text" placeholder="Describe your project in detail..."></textarea>
-                <input class="field_form f-submit" type="submit" value="Submit">
+              <form action="#" method="POST" class="form-q" id="end_form">
+                <input class="field_form"  type="text" id="name_form" name="user_name" placeholder="Name (Required)" pattern="[A-Za-zА-Яа-я '-]+" required>
+                <input class="field_form" type="email" id="email_form" name="user_email" placeholder="Email (Required)" required>
+                <input class="field_form" type="text" id="subject_form" name="subject" placeholder="Subject">
+                <textarea class="field_form f-textarea"  id="describe_form" name="subject_text" placeholder="Describe your project in detail..."></textarea>
+                <input class="field_form f-submit" id="submit_form" type="button" value="Submit">
               </form>
               <div class="contact">
                 <h3 class="contact_title">Contact Information</h3>
@@ -282,6 +282,14 @@
                 </div>
               </div>
             </div>
+            <div class="glass_message black_fon" id="glass_message">
+                <div class="message">
+                  <p lang="en" class="pain">The letter was sent  </p>
+                  <p id="subject_glass" lang="ru">No subject </p>
+                  <p id="describe_glass" lang="ru">No description</p>
+                  <a class="ok-btn" id="but_OK">OK</a>
+                </div>
+              </div>
           </section>
         </main>
         <footer class="footer">
