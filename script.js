@@ -19,17 +19,39 @@ menu.addEventListener('click', (event) => {
   menuElement.classList.add('red');
 })
 //Scroll HEADER
-document.addEventListener('scroll',onScroll);
+document.addEventListener('scroll', onScroll);
 
-function onScroll(event)
-{
+function onScroll(event) {
   const curPos = window.scrollY;
-document.querySelectorAll('main > div').forEach((el)=>{
-console.log(el.getAttribute('id'));
-//debugger;
-el.getAttribute('id');
+  const divs = document.querySelectorAll('main > div');
+  const link = document.querySelectorAll('#menu_all a');
 
-});
+  divs.forEach((el) => {
+
+
+    if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
+      link.forEach((a) => {
+        a.classList.remove('red');
+        if(window.scrollY < 500)
+        {
+          document.getElementById('one_menu').classList.add('red');
+        }else
+        if (window.scrollY > 2500) {
+          document.getElementById('last_menu').classList.add('red');
+        }else
+        if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+          a.classList.add('red');
+        }
+
+
+
+      })
+
+      
+
+    }
+    
+  });
 }
 
 
