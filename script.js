@@ -10,6 +10,33 @@ const scrollRight = document.getElementById('scroll_right');
 const menuProfile = document.getElementById('menu_point');
 let shet = 1;
 
+//HEADER iphone
+let header = document.querySelector('.header');
+//   let li = document.querySelectorAll('.navigation__item');
+ let burgerEnable = false;
+
+ header.querySelector('.burger-menu__button').addEventListener('click', () => {
+  burgerActive();
+});
+
+function burgerActive() {
+   
+  if (burgerEnable === false){
+    document.querySelector('.burger-menu__button').classList.add('active');
+    document.querySelector('.png').classList.add('logo_active'); 
+    document.querySelector('.header__navigation').classList.add('navigation_active'); 
+    document.querySelector('.menu').classList.add('menu_active'); 
+    burgerEnable = true;
+  } 
+  else {
+    document.querySelector('.burger-menu__button').classList.remove('active');
+    document.querySelector('.png').classList.remove('logo_active'); 
+    document.querySelector('.header__navigation').classList.remove('navigation_active'); 
+    document.querySelector('.menu').classList.remove('menu_active'); 
+    burgerEnable = false;
+  }
+
+}
 
 // HEADER
 menu.addEventListener('click', (event) => {
@@ -61,10 +88,13 @@ function onScroll(event) {
 image.addEventListener('click', (event) => {
   image.querySelectorAll('img').forEach(el => el.classList.remove('active_img'));
   event.target.classList.add('active_img');
+  document.getElementById('photo_container').classList.remove('active_img')
 });
 menuProfile.addEventListener('click', (event) => {
   menuProfile.querySelectorAll('a').forEach(el => el.classList.remove('menu_active'));
   event.target.classList.add('menu_active');
+  document.getElementById('photo_container').classList.remove('active_img')
+
   shet++
   for (let i = 1; i < 13; i++) {
     document.getElementById(`myImage${i}`).src = `./assets/images/Portfol/${shet}.png`;
