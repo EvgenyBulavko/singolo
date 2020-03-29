@@ -93,6 +93,9 @@ image.addEventListener('click', (event) => {
 menuProfile.addEventListener('click', (event) => {
   menuProfile.querySelectorAll('a').forEach(el => el.classList.remove('menu_active'));
 
+  
+  
+  
   image.querySelectorAll('img').forEach(el => el.classList.remove('active_img'));
 
   event.target.classList.add('menu_active');
