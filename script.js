@@ -92,13 +92,18 @@ image.addEventListener('click', (event) => {
 });
 menuProfile.addEventListener('click', (event) => {
   menuProfile.querySelectorAll('a').forEach(el => el.classList.remove('menu_active'));
+
+  image.querySelectorAll('img').forEach(el => el.classList.remove('active_img'));
+
   event.target.classList.add('menu_active');
   document.getElementById('photo_container').classList.remove('active_img')
 
   shet++
   for (let i = 1; i < 13; i++) {
+    
     document.getElementById(`myImage${i}`).src = `./assets/images/Portfol/${shet}.png`;
-    if (shet === 12) { shet = 0; }
+
+    if (shet == 12) { shet = 0; }
     shet++;
   }
 
